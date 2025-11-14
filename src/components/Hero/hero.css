@@ -1,0 +1,149 @@
+/* ===== HERO SECTION ===== */
+.hero-section {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background: linear-gradient(
+      to bottom,
+      rgba(20, 20, 20, 0.7),
+      rgba(0, 0, 0, 0.9)
+    ),
+    url("../../assets/bg-hero.png") center/cover no-repeat;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* ===== MAIN TEXT ===== */
+.hero-text-left,
+.hero-text-right {
+  font-family: "Anton", sans-serif;
+  font-weight: 500;
+  font-size: clamp(3rem, 10vw, 10rem);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(80px);
+  animation: fadeSlideUp 1s ease-out forwards;
+}
+
+.hero-text-right {
+  color: var(--secondary);
+  animation-delay: 0.3s;
+}
+
+/* ===== DESCRIPTION ===== */
+.hero-description {
+  margin-top: 1.5rem;
+  max-width: 700px;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #eaeaea;
+  font-family: sans-serif;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 1.2s ease-out forwards;
+  animation-delay: 0.6s;
+}
+
+/* ===== BUTTONS ===== */
+.hero-btn-container {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2.5rem;
+  opacity: 0;
+  animation: fadeIn 1.2s ease-out forwards;
+  animation-delay: 0.9s;
+}
+
+.hero-btn {
+  padding: 14px 32px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-btn.primary {
+  background: var(--secondary);
+  color: #000;
+  box-shadow: 0 0 15px rgba(4, 56, 124, 0.4);
+}
+
+.hero-btn.primary:hover {
+  background: var(--secondary);
+  transform: translateY(-3px);
+}
+
+.hero-btn.secondary {
+  background: transparent;
+  border: 2px solid var(--secondary);
+  color: var(--secondary);
+}
+
+.hero-btn.secondary:hover {
+  background: var(--secondary);
+  color: #000;
+  transform: translateY(-3px);
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero-description {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .hero-btn-container {
+    flex-direction: column;
+  }
+
+  .hero-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text-left,
+  .hero-text-right {
+    font-size: clamp(2rem, 12vw, 6rem);
+  }
+   .hero-btn-container {
+    gap: 1rem;
+    align-items: center;
+   }
+   .hero-btn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+    width: 80%;
+   }
+}

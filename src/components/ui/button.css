@@ -1,0 +1,102 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: none;
+  border-radius: 10rem;
+  cursor: pointer;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: var(--clr, #7808d0);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.button:hover {
+  background-color: #000;
+}
+
+.button__icon-wrapper {
+  width: 25px;
+  height: 25px;
+  background-color: #fff;
+  color: var(--clr, #7808d0);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.button__icon-svg--copy {
+  position: absolute;
+  transform: translate(-150%, 150%);
+}
+
+.button:hover .button__icon-svg:first-child {
+  transform: translate(150%, -150%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.button:hover .button__icon-svg--copy {
+  transform: translate(0);
+  transition: transform 0.3s ease-in-out 0.1s;
+}
+/* Base style (already exists) */
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: none;
+  border-radius: 10rem;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  color: #fff;
+  background-color: var(--clr);
+  transition: 0.3s ease;
+}
+
+/* VARIANTS */
+.button--primary {
+  background-color: var(--clr);
+  color: #fff;
+}
+
+.button--primary:hover {
+  background-color: #000;
+}
+
+.button--secondary {
+  background-color: #fff;
+  color: var(--clr);
+  border: 2px solid var(--clr);
+}
+
+.button--secondary:hover {
+  background-color: var(--clr);
+  color: #fff;
+}
+
+.button--outline {
+  background-color: transparent;
+  border: 2px solid var(--clr);
+  color: var(--clr);
+}
+
+.button--outline:hover {
+  background-color: var(--clr);
+  color: #000000;
+  
+}
+
+.button--ghost {
+  background: transparent;
+  color: #555;
+}
+
+.button--ghost:hover {
+  color: var(--clr);
+}
