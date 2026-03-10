@@ -11,6 +11,9 @@ import shohei from "../../assets/png/shohei.jpg"
 import trent from "../..//assets/png/trent.jpg"
 import lamr from "../../assets/png/lamr.jpg"
 import lewis from "../../assets/png/lewis.jpg" 
+import rugby from "../../assets/png/rugby.png"
+import tennis from "../../assets/png/tennis.png"
+import nfl from "../../assets/png/nfl.png"
 
 import adidasspezial from "../../assets/png/ADS/adidasspezial.jpg"
 import heinneken from "../../assets/png/ADS/heineken.jpg"
@@ -23,6 +26,7 @@ import net from "../../assets/png/UIUX/net.jpg"
 
 import wondrous from "../../assets/png/UIUX/wondrous.png"
 import coldstart from "../../assets/png/UIUX/coldstart.png"
+import realestate from "../../assets/png/UIUX/realestate.png"
 
 const Project = () => {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -37,6 +41,10 @@ const Project = () => {
     { id: 8, title: "Basketball Poster", category: "Sports Design", image: shohei },
     { id: 10, title: "Basketball Poster", category: "Sports Design", image: lamr },
     { id: 10, title: "Basketball Poster", category: "Sports Design", image: lewis },
+    { id: 11, title: "Rugby", category: "Sports Design", image: rugby },
+    { id: 12, title: "Tennis", category: "Sports Design", image: tennis },
+    { id: 13, title: "Nfl", category: "Sports Design", image: nfl },
+    
 
     { id: 1, title: "Product Ad", category: "Advertisement", image: adidasspezial },
     { id: 11, title: "Product Ad", category: "Advertisement", image: heinneken },
@@ -49,6 +57,8 @@ const Project = () => {
     
     { id: 13, title: "Wondrous App Design", category: "UX/UI", image: wondrous },
     { id: 14, title: "ColdStart App Design", category: "UX/UI", image: coldstart },
+    { id: 14, title: "Realestate", category: "UX/UI", image: realestate },
+    
   ];
 
   const categories = [

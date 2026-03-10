@@ -44,9 +44,7 @@ const Navbar = () => {
               {item.name}
             </a>
           ))}
-          <a href="/resume.pdf" download className="btn-resume">
-            Download Resume
-          </a>
+          
         </div>
 
         {/* 📱 Mobile Menu Toggle */}
